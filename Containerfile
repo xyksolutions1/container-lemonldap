@@ -5,16 +5,16 @@
 ARG \
     BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-nginx:main
 
 LABEL \
         org.opencontainers.image.title="LemonLDAP:NG" \
         org.opencontainers.image.description="Authentication and Authorization Platform" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/lemonldap" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-lemonldap/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-lemonldap.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/lemonldap" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-lemonldap/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-lemonldap.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
@@ -39,8 +39,8 @@ ENV \
     LLNG_USER=llng \
     LLNG_GROUP=llng \
     PATH=/usr/share/lemonldap-ng/bin:${PATH} \
-    IMAGE_NAME="nfrastack/lemonldap" \
-    IMAGE_REPO_URL="https://github.com/nfrastack/container-lemonldap/"
+    IMAGE_NAME="xyksolutions1/lemonldap" \
+    IMAGE_REPO_URL="https://github.com/xyksolutions1/container-lemonldap/"
 
 RUN echo "" && \
     BUILD_ENV=" \
